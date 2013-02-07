@@ -5,7 +5,7 @@ Ext.application({
 
     controllers: ["Main"],
 
-    views: ["Main"],
+    views: ["BigGrid","Main"],
 
 
     name: 'BigGrid',

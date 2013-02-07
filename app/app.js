@@ -1,4 +1,6 @@
 Ext.application({
+    models: ["ForumThread"],
+
     controllers: ["Main"],
 
     views: ["Main"],

@@ -3,7 +3,8 @@ Ext.define('BigGrid.store.ForumThreads', {
 
     id: 'ForumThreadsStore',
     model: 'BigGrid.model.ForumThread',
-    pageSize: 10000,
+    pageSize: 100,
+    buffered: true,
     autoLoad: true,
     proxy: {
         type: 'jsonp',

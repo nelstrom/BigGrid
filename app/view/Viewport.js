@@ -2,24 +2,10 @@ Ext.define('BigGrid.view.Viewport', {
     renderTo: Ext.getBody(),
     extend: 'Ext.container.Viewport',
     requires:[
-        'Ext.tab.Panel',
-        'Ext.layout.container.Border'
+        'BigGrid.view.BigGrid'
     ],
 
-    layout: {
-        type: 'border'
-    },
+    layout: { type: 'fit' },
 
-    items: [{
-        region: 'west',
-        xtype: 'panel',
-        title: 'west',
-        width: 150
-    },{
-        region: 'center',
-        xtype: 'tabpanel',
-        items:[{
-            title: 'Center Tab 1'
-        }]
-    }]
+    items: [{ xtype: 'biggrid' }]
 });

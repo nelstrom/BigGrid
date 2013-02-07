@@ -7,10 +7,16 @@ Ext.define('BigGrid.model.ForumThread', {
         { name: 'forumid', type: 'auto' },
         { name: 'username', type: 'auto' },
         { name: 'replycount', type: 'int' },
-        { name: 'lastpost', type: 'date' },
+        {
+            name: 'lastpost',
+            mapping: 'lastpost',
+            type: 'date',
+            dateFormat: 'timestamp'
+        },
         { name: 'lastposter', type: 'auto' },
         { name: 'excerpt', type: 'auto' },
         { name: 'threadid', type: 'auto' }
-    ]
+    ],
+    idProperty: 'threadid'
 });
 

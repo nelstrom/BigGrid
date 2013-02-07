@@ -1,5 +1,55 @@
 Ext.define("BigGrid.view.BigGrid", {
-    extend: 'Ext.Component',
+    extend: 'Ext.grid.Panel',
     alias: ['widget.biggrid'],
-    html: 'Hello, World!!'
+
+    requires:[
+        'Ext.data.proxy.JsonP',
+        'Ext.grid.RowNumberer'
+	],
+
+    title: 'ExtJS.com - Browse Forums',
+    store: 'ForumThreads',
+    loadMask: true,
+
+    columns:[{
+        xtype: 'rownumberer',
+        width: 50,
+        sortable: false
+    },{
+        tdCls: 'x-grid-cell-topic',
+        text: "Topic",
+        dataIndex: 'title',
+        flex: 1,
+        renderer: function (value, p, record) {
+                return Ext.String.format(
+                '<a href="http://sencha.com/forum/showthread.php?t={2}" target="_blank">{0}</a>',
+                value,
+                record.data.forumtitle,
+                record.getId(),
+                record.data.forumid
+            );
+        },
+        sortable: true
+    },{
+        text: "Author",
+        dataIndex: 'username',
+        width: 100,
+        hidden: true,
+        sortable: true
+    },{
+        text: "Replies",
+        dataIndex: 'replycount',
+        align: 'center',
+        width: 70,
+        sortable: false
+    },{
+        id: 'last',
+        text: "Last Post",
+        dataIndex: 'lastpost',
+        width: 130,
+        renderer: Ext.util.Format.dateRenderer('n/j/Y g:i A'),
+        sortable: true,
+        groupable: false
+    }],
+
 });

@@ -11,13 +11,6 @@ Ext.define("BigGrid.view.BigGrid", {
     store: 'ForumThreads',
     loadMask: true,
 
-    plugins: 'bufferedrenderer',
-
-    features:[{
-        ftype: 'grouping',
-        hideGroupedHeader: false
-    }],
-
     columns:[{
         xtype: 'rownumberer',
         width: 50,

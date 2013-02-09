@@ -24,7 +24,7 @@ Ext.define("BigGrid.view.BigGrid", {
         tdCls: 'x-grid-cell-topic',
         text: "Topic",
         dataIndex: 'title',
-        flex: 1,
+        width: 500,
         renderer: function (value, p, record) {
                 return Ext.String.format(
                 '<a href="http://sencha.com/forum/showthread.php?t={2}" target="_blank">{0}</a>',
@@ -55,6 +55,70 @@ Ext.define("BigGrid.view.BigGrid", {
         renderer: Ext.util.Format.dateRenderer('n/j/Y g:i A'),
         sortable: true,
         groupable: false
-    }],
+    },{
+        text: "Forum",
+        dataIndex: 'forumtitle',
+        width: 160,
+        sortable: false
+    },{
+        text: "Author",
+        dataIndex: 'username',
+        width: 100,
+        sortable: true
+    },{
+        text: "Replies",
+        dataIndex: 'replycount',
+        align: 'center',
+        width: 70,
+        sortable: false
+    },{
+        text: "Forum",
+        dataIndex: 'forumtitle',
+        width: 160,
+        sortable: false
+    },{
+        text: "Author",
+        dataIndex: 'username',
+        width: 100,
+        sortable: true
+    },{
+        text: "Replies",
+        dataIndex: 'replycount',
+        align: 'center',
+        width: 70,
+        sortable: false
+    },{
+        text: "Forum",
+        dataIndex: 'forumtitle',
+        width: 160,
+        sortable: false
+    },{
+        text: "Author",
+        dataIndex: 'username',
+        width: 100,
+        sortable: true
+    },{
+        text: "Replies",
+        dataIndex: 'replycount',
+        align: 'center',
+        width: 70,
+        sortable: false
+    },{
+        text: "Forum",
+        dataIndex: 'forumtitle',
+        width: 160,
+        sortable: false
+    },{
+        text: "Author",
+        dataIndex: 'username',
+        width: 100,
+        sortable: true
+    },{
+        text: "Replies",
+        dataIndex: 'replycount',
+        align: 'center',
+        width: 70,
+        sortable: false
+    }]
 
 });
